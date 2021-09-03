@@ -38,7 +38,7 @@ function Navbar() {
                         <div className="collapse navbar-collapse" id="navbarSupportedContent">
                             <ul className="navbar-nav mx-lg-auto mb-2 mb-lg-0 ">
                                 <li className="nav-item">
-                                    <NavLink exact activeClassName="menu_active" to='/' className="nav-link active" aria-current="page" >Home <span className='ms-sm-4 me-sm-4 ms-3 me-3'>|</span> </NavLink>
+                                    <NavLink exact activeClassName="menu_active" to='/TEN-frontend-clone-/' className="nav-link active" aria-current="page" >Home <span className='ms-sm-4 me-sm-4 ms-3 me-3'>|</span> </NavLink>
                                 </li>
                                 <li className="nav-item">
                                     <NavLink exact activeClassName="menu_active" to='/onlinecourse' className="nav-link" > Online Courses <span className='ms-sm-4 me-sm-4 ms-3 me-3'>|</span> </NavLink>

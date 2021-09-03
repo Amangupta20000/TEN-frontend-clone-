@@ -2,7 +2,7 @@ import React from 'react'
 import Navbar from './Navbar'
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import "../node_modules/bootstrap/dist/js/bootstrap.bundle";
-import { Route, Switch } from 'react-router-dom';
+import { Redirect, Route, Switch } from 'react-router-dom';
 import Home from './Home'
 import Hiring from './Components/Hiring'
 import Footer from './Footer';
@@ -17,7 +17,7 @@ function App() {
         <div>
             <Navbar />
             <Switch>
-                <Route path='/' exact component={Home} />
+                <Route path='/' exact  ><Redirect to='/TEN-frontend-clone-/'/> </Route>
                 <Route path='/TEN-frontend-clone-/' exact component={Home} />
                 <Route path='/hiring' exact component={Hiring} />
                 <Route path='/testimonials' exact component={Testimonial} />
