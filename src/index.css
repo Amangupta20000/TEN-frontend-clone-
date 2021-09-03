@@ -1,13 +1,943 @@
+@import url("https://fonts.googleapis.com/css2?family=STIX+Two+Text:ital,wght@1,480;1,500&display=swap");
+* {
+  font-family: "STIX Two Text", serif;
+}
+#root,
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh !important;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* //////////////////Navbar css ////////////// */
+.Header {
+  width: 20% !;
+  position: relative;
+}
+.heading {
+  font-size: 3rem;
+  text-shadow: 2px 2px 1px black;
+}
+.logoImg {
+  filter: drop-shadow(0 3mm 1mm rgb(0, 0, 0));
+  top: 4.6rem;
+  left: 1rem;
+  padding: 55px;
+  position: absolute;
+  z-index: -1;
+  color: white;
+}
+.logo {
+  width: 100px;
+  height: 80px;
+  object-fit: cover;
+}
+.searchForm {
+  position: relative;
+  width: 100%;
+  margin-top: 5rem !important;
+}
+.inputSearch {
+  width: 100%;
+  padding: 8px 1.5rem 8px 1.5rem;
+  border-radius: 3rem;
+  margin-top: 2rem;
+  background-color: black;
+  color: white;
+  border: none;
+  outline: none;
+}
+::placeholder {
+  color: rgba(179, 179, 179, 0.863);
+}
+.SubmitBtn {
+  position: absolute;
+  top: 2.1rem;
+  right: 8px;
+  font-size: 1.2rem;
+  border-radius: 50%;
+  color: white;
+  background-color: black;
+  border: none;
+  outline: none;
+}
+.searchForm :hover + .SubmitBtn {
+  background-color: pink;
+}
+.searchForm :hover {
+  background-color: pink;
+}
+.CartButton {
+  position: absolute;
+  background-color: red;
+  color: black;
+  font-size: x-large;
+  padding: 0.4rem 3rem 0.4rem 3rem;
+  border-radius: 2rem;
+  margin-top: 40px;
+}
+.CartButton:hover {
+  background-color: cornflowerblue;
+  color: white;
+}
+.loginButton {
+  position: absolute;
+  font-size: 1.2rem;
+  border: 2px solid black !important;
+  background-color: white;
+  padding: 0.4rem 1rem 0.4rem 1.2rem;
+  margin: 40px 0 0 14rem;
+  color: black;
+  text-decoration: none;
+  box-shadow: 0px 0px 5px 2px rgba(0, 0, 0, 0.432);
+}
+.loginButton:hover {
+  color: black;
+}
+.nav-link {
+  text-decoration: none;
+  color: black !important;
+  font-size: x-large;
+}
+.dropdown {
+  text-decoration: none;
+  padding: 0 1rem;
+  color: black;
+}
+.dropdown:hover {
+  color: red;
+}
+.dropdown-menu {
+  width: 25rem !important;
+  position: static;
+}
+.navbar-nav {
+  position: static;
+}
+.menu_active {
+  color: red !important;
+}
+/* //////////////////////Home css //////////////////// */
+.homeImg {
+  width: 80rem;
+}
+.comp1_container {
+  width: 88.9%;
+  margin-top: 2.5rem;
+}
+.comp2_container {
+  width: 87.2%;
+}
+.learning {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  margin-top: 3rem;
+}
+.img-fluid {
+  border-radius: 10px;
+  border: 2px solid black;
+}
+.backgroundImg {
+  background-size: 100% 100%;
+  background-image: url("./images/HomeImg3.webp");
+}
+.backgroundColor {
+  background-color: rgb(247, 47, 90);
+}
+.journey {
+  font-size: 4rem;
+  color: rgb(240, 59, 14);
+  -webkit-text-stroke: 1px black;
+}
+.exploreBtn {
+  position: absolute;
+  padding: 0.4rem 3rem 0.4rem 3rem;
+  border-radius: 2rem;
+  font-size: x-large;
+  color: white;
+  background-color: black;
+  text-decoration: none;
+  margin: 5rem 0 0 2.5rem;
+}
+.exploreBtn:hover {
+  color: white;
+  background-color: rgb(240, 59, 14);
+  border: 1px solid rgb(255, 51, 0);
+}
+.Comp4BackImg {
+  background-size: 100% 100%;
+  background-image: url("./images/HomeImg4.webp");
+  min-width: 20rem;
+  min-height: 25rem;
+}
+.Comp4BackImg2 {
+  background-size: 100% 100%;
+  background-image: url("./images/HomeImg5.webp");
+}
+.comp5BackImg {
+  background-size: 100% 100%;
+  background-image: url("./images/HomeImg6.webp");
+  min-width: 20rem;
+  min-height: 25rem;
+}
+.centerbtn {
+  margin-left: 11rem;
+}
+
+.CourseRibbon {
+  width: 85%;
+}
+.comp6_container {
+  width: 85%;
+}
+.paraMargins {
+  margin-right: 3rem;
+  margin-left: 3rem;
+  padding-right: 1.5rem;
+  padding-left: 1.5rem;
+}
+.comp7_container {
+  width: 85%;
+  margin: auto;
+  height: 80% !important;
+}
+.carousel-caption {
+  right: 25% !important;
+  left: 25% !important;
+  top: 25% !important;
+}
+.carousalText {
+  font-size: x-large;
+}
+video {
+  width: 100%;
+  object-fit: fill;
+  height: 23rem !important;
+  text-align: center;
+  margin-top: 2rem;
+}
+.upprDiv {
+  bottom: 14rem;
+  left: 18rem;
+  width: 55%;
+}
+.power {
+  text-shadow: 2px 1px 2px white;
+  width: 100%;
+}
+.stroke {
+  -webkit-text-stroke: 1px black;
+}
+.videoBtn {
+  position: absolute;
+  text-decoration: none;
+  background-color: red;
+  color: white;
+  padding: 20px 25px 20px 25px;
+  font-size: large;
+  margin-left: 8rem;
+  transition: 0.15s;
+  margin-top: 0;
+}
+
+.videoBtn:hover {
+  color: black;
+  border: 1px solid black;
+  background-color: white;
+  text-shadow: 2px 2px 4px black;
+  font-size: 1.4rem;
+  padding: 18px 10px 17px 12px;
+}
+
+/* //////////////////////We'r Hiring css //////////////////// */
+.backgroundImgHiring {
+  background-image: url("./images/HiringImg1.png");
+  background-color: black;
+  object-fit: cover;
+  padding: 0 !important;
+}
+.bg {
+  background-color: rgba(49, 48, 48, 0.685);
+}
+.hiringText {
+  font-size: larger;
+  margin: 0 11rem;
+}
+.Hiring_container {
+  margin: 5px 7rem;
+}
+.hiringImg {
+  width: 75%;
+  margin-top: 4rem;
+}
+
+/* //////////////////////Complaint css //////////////////// */
+.ComplaintImg {
+  width: 80%;
+  margin: 1rem 11rem;
+}
+/* //////////////////////Contact Us css //////////////////// */
+.contactDiv {
+  border: 1px solid black;
+  padding: 2rem;
+  margin-left: 21rem;
+  background-color: rgba(240, 165, 140, 0.158);
+}
+.inputField {
+  border: none;
+  margin: 0rem 1rem 1rem 1rem;
+  width: 90%;
+  border-bottom: 2px solid black;
+}
+.contactBtn {
+  border: none;
+  background-color: transparent;
+  margin-left: 80%;
+  font-size: large;
+  margin-top: 1rem;
+}
+.contactBtn:hover {
+  color: tomato;
+}
+/* //////////////////////Course card  css //////////////////// */
+.courseImg {
+  height: 200px;
+}
+.card {
+  cursor: pointer;
+  transition: top ease 5.5s;
+}
+.quikView {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.767);
+  padding-top: 5px;
+  margin: 0;
+  top: 13rem;
+  z-index: -1;
+  transition: 0.3s;
+  width: 100%;
+  font-size: 0;
+}
+.card:hover .quikView {
+  position: absolute;
+  top: 10.6rem;
+  z-index: 1;
+  font-size: 16px;
+}
+/* //////////////////////Footer css //////////////////// */
+.footer {
+  margin-top: auto !important;
+  padding: 10px 0;
+  justify-content: center;
+  align-items: center;
+  background-color: sandybrown;
+}
+.facebook,
+.twitter {
+  font-size: 3.5rem;
+}
+.Insta {
+  width: 3.5rem;
+}
+.instagram,
+.facebook,
+.twitter {
+  text-decoration: none;
+  margin-right: 2px;
+}
+.facebook {
+  margin-left: 15rem;
+}
+.footerIcons {
+  padding: 6rem 0rem;
+}
+.Name {
+  width: 48%;
+  margin-top: 10px;
+  padding: 0.8rem 0rem 0.8rem 0.5rem;
+}
+.footerLink {
+  text-shadow: 2px 1px 4px black;
+}
+
+/* //////////////////////Responsive Code //////////////////// */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 200px) {
+  .collapse:not(.show) {
+    display: block !important;
+    display: flex !important;
+    flex-basis: auto;
+  }
+  .navBar {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (max-width: 992px) {
+  .facebook {
+    margin-left: 7rem;
+  }
+  .facebook,
+  .twitter {
+    font-size: 2.3rem;
+  }
+  .Insta {
+    width: 2.3rem;
+  }
+
+  .loginButton {
+    font-size: 1rem;
+    padding: 0.4rem 0.8rem 0.4rem 1rem;
+    margin: 45px 0 0 9rem;
+  }
+  .fun,
+  .learning {
+    font-size: 1.6rem;
+  }
+  .learning {
+    margin: 1rem 0 1rem 0;
+  }
+  .journey {
+    font-size: 3rem;
+  }
+  .exploreBtn {
+    margin: 3rem 0 0 1rem;
+    font-size: small;
+    padding: 0.4rem 2rem 0.4rem 2rem;
+  }
+  .centerbtn {
+    margin-left: 5rem;
+  }
+  .paraResponsive {
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.73rem;
+  }
+  .carousalText {
+    font-size: 0.9rem;
+  }
+  .upprDiv {
+    left: 8rem;
+    width: 68%;
+  }
+  .card-text {
+    font-size: 0.7rem;
+  }
+  .courseImg {
+    height: 6rem;
+  }
+  .quikView {
+    top: 6rem;
+    width: 100%;
+  }
+  .card:hover .quikView {
+    top: 4.8rem;
+    font-size: 10px;
+  }
+  .hiringText {
+    margin: 0 1.5rem;
+    font-size: 0.9rem;
+  }
+  .Hiring_container {
+    margin: 5px 3rem;
+  }
+  .hiringImg {
+    width: 88%;
+    margin-top: 2.5rem;
+  }
+  .contactDiv {
+    margin-left: 10rem;
+  }
+  .contactBtn {
+    margin-left: 70%;
+  }
+  .ComplaintImg {
+    margin: 1rem 7rem;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1200px) {
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+  .dropdown-menu[data-bs-popper] {
+    left: auto !important;
+  }
+  .upprDiv {
+    left: 17rem !important;
+  }
+  .videoBtn {
+    margin-left: 5rem;
+  }
+  .power {
+    font-size: xx-large !important;
+  }
+  .navBar {
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+  .exploreBtn {
+    margin: 4rem 0 0 1.2rem;
+    font-size: medium;
+  }
+  .fun,
+  .learning {
+    font-size: 2rem;
+  }
+  .learning {
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+    margin-top: 1.5rem;
+  }
+  .journey {
+    font-size: 3.5rem;
+  }
+  .centerbtn {
+    margin-left: 8rem !important;
+  }
+  .paraResponsive {
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
+    padding-right: 0.8rem;
+    padding-left: 0.8rem;
+    font-size: 0.95rem;
+  }
+  .hiringText {
+    margin: 0 1.5rem;
+    font-size: large;
+  }
+  .Hiring_container {
+    margin: 5px 3rem;
+  }
+  .hiringImg {
+    width: 85%;
+    margin-top: 2.5rem;
+  }
+  .contactDiv {
+    margin-left: 13rem;
+  }
+  .facebook {
+    margin-left: 9rem;
+  }
+  .facebook,
+  .twitter {
+    font-size: 3rem;
+  }
+  .Insta {
+    width: 3rem;
+  }
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    flex-direction: row !important;
+    padding-left: 5rem;
+    margin-left: 4.5rem !important;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+  .dropdown-menu[data-bs-popper] {
+    left: auto !important;
+  }
+  .navBar {
+    max-width: 960px !important;
+  }
+  .nav-link {
+    font-size: larger;
+  }
+}
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .upprDiv {
+    left: 23rem !important;
+  }
+  .facebook {
+    margin-left: 15rem;
+  }
+  .navbar-nav .dropdown-menu {
+    position: absolute !important;
+  }
+  .dropdown-menu[data-bs-popper] {
+    left: auto !important;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1325px) {
+  .facebook {
+    margin-left: 12rem;
+  }
+}
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2rem;
+  }
+  .logoImg {
+    top: 1.8rem;
+  }
+  .loginButton {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.7rem 0.4rem 0.9rem;
+    margin: 30px 0 0 5.5rem;
+  }
+  .CartButton {
+    font-size: medium;
+    padding: 0.4rem 2rem 0.4rem 2rem;
+    margin-top: 28px;
+  }
+  .nav-link {
+    font-size: small;
+  }
+  .inputSearch {
+    padding: 8px 1.5rem 8px 1.5rem;
+    border-radius: 3rem;
+    margin-top: 0.5rem;
+    font-size: small;
+    margin-bottom: 1.5rem;
+  }
+  .SubmitBtn {
+    top: 0.7rem;
+    right: 8px;
+    font-size: 1rem;
+  }
+  .fun {
+    font-size: 1.1rem;
+    margin-top: 2rem;
+  }
+  .learning {
+    font-size: 1.3rem;
+  }
+  .learning {
+    margin-right: 1rem;
+    margin-left: 1rem;
+    margin-top: -0.3rem;
+    padding-right: 1.1rem;
+    padding-left: 1.1rem;
+  }
+  .journey {
+    font-size: 2rem;
+  }
+  .exploreBtn {
+    margin: 2rem 0 0 1.4rem;
+    font-size: small;
+    padding: 0.3rem 1rem 0.3rem 1rem;
+  }
+  .comp2_container {
+    width: 114.1%;
+  }
+  .comp1_container {
+    width: 116%;
+  }
+  .centerbtn {
+    margin-left: 5.5rem;
+  }
+  .ribbon {
+    width: 114.1%;
+  }
+  .CourseRibbon {
+    width: 100%;
+  }
+  .comp6_container {
+    width: 114.1%;
+  }
+  .paraResponsive {
+    margin-right: 0.4rem;
+    margin-left: 0.4rem;
+    padding-right: 0.5rem;
+    padding-left: 0.5rem;
+    font-size: 0.55rem;
+  }
+  .carousalText {
+    font-size: 0.6rem;
+  }
+  .comp7_container {
+    width: 114.1%;
+  }
+  .upprDiv {
+    left: 8rem;
+    width: 68%;
+  }
+  .footerComponent {
+    width: 117% !important;
+  }
+  .Name {
+    width: 47%;
+    margin-top: 8px;
+    padding: 0.4rem 0.1rem 0.4rem 0.1rem;
+  }
+  .facebook,
+  .twitter {
+    font-size: 2rem;
+  }
+  .facebook {
+    margin-left: 4.2rem;
+  }
+  .Insta {
+    width: 2rem;
+  }
+  .footer {
+    width: 115%;
+  }
+  .footerFontSize {
+    font-size: medium;
+  }
+  .card-text {
+    font-size: 0.5rem;
+    margin-bottom: 0.5rem;
+  }
+  .courseImg {
+    height: 5rem;
+  }
+  .CourseContainer {
+    width: 116% !important;
+  }
+  .quikView {
+    top: 5rem;
+    align-items: center;
+    height: 1rem;
+    width: 100%;
+  }
+  .card:hover .quikView {
+    top: 4.5rem;
+    font-size: 7px;
+  }
+  .Amount {
+    font-size: x-small;
+    margin-bottom: 0;
+  }
+  .card-body {
+    padding: 0.6rem 0.6rem !important;
+  }
+  .filterBy,
+  .priceHeading {
+    font-size: small !important;
+  }
+  .MuiSlider-thumb {
+    width: 8px;
+    height: 8px;
+    margin-top: -3px;
+  }
+  .Hiring_container {
+    width: 104%;
+  }
+  .hiringText {
+    margin: 0 1rem;
+    font-size: 0.7rem;
+  }
+  .hiringImg {
+    width: 92%;
+    margin-top: 2.5rem;
+    margin-bottom: 2rem;
+  }
+  .contactDiv {
+    margin-left: 6rem;
+    padding: 1rem;
+    height: 90%;
+  }
+  .contactBtn {
+    margin-left: 64%;
+    font-size: smaller;
+    margin-top: 0;
+  }
+  .contactComponent {
+    width: 114%;
+  }
+  .inputField {
+    font-size: small;
+  }
+  .Newsletter {
+    font-size: medium;
+  }
+}
+@media (max-width: 540px) {
+  .navBar {
+    width: 149% !important;
+  }
+  .logoImg {
+    padding: 55px 55px 55px 35px;
+  }
+  .logo {
+    width: 80px;
+    height: 65px;
+  }
+  .heading {
+    font-size: 1.9rem;
+  }
+  .CartButton {
+    font-size: medium;
+    padding: 0.3rem 1.3rem 0.3rem 1.3rem;
+    margin-top: 28px;
+    margin-left: 2rem;
+  }
+  .loginButton {
+    font-size: 0.7rem;
+    padding: 0.3rem 0.5rem 0.3rem 0.5rem;
+    margin: 30px 0 0 6.5rem;
+    width: 17%;
+  }
+  .searchForm {
+    width: 100%;
+    margin-top: 3.8rem !important;
+  }
+  .inputSearch {
+    padding: 8px 1.5rem 8px 1.5rem;
+    border-radius: 3rem;
+    font-size: x-small;
+    margin-bottom: 1.4rem;
+  }
+  .SubmitBtn {
+    top: 0.2rem;
+    font-size: 0.8rem;
+  }
+  .nav-link {
+    font-size: 0.7rem;
+  }
+  .collapse {
+    width: 100%;
+  }
+  .aboutUs {
+    font-size: medium;
+  }
+  .learning {
+    font-size: 1.3rem;
+  }
+  .LearnBtn {
+    font-size: small;
+  }
+  .comp6_container {
+    width: 159.1%;
+  }
+  .comp2_container {
+    width: 159.1%;
+  }
+  .comp1_container {
+    width: 159%;
+  }
+  .exploreBtn {
+    font-size: medium;
+    width: 30%;
+  }
+  .ribbon {
+    width: 162.1%;
+  }
+  .testimonial {
+    width: 142%;
+  }
+  .footerComponent {
+    width: 162% !important;
+  }
+  .footer {
+    width: 162%;
+  }
+  .ComplaintImg {
+    width: 107%;
+  }
+  .ContactHeading {
+    width: 142%;
+  }
+  .CourseContainer {
+    width: 162% !important;
+  }
+  .Hiring_container {
+    width: 138%;
+  }
+}
+@media (max-width: 360px) {
+  .comp2_container {
+    width: 178.1%;
+  }
+  .navBar {
+    width: 178% !important;
+  }
+  .comp1_container {
+    width: 178%;
+  }
+  .ribbon {
+    width: 181.1%;
+  }
+  .comp6_container {
+    width: 178.1%;
+  }
+  .testimonial {
+    width: 159%;
+  }
+  .footerComponent {
+    width: 181% !important;
+  }
+  .footer {
+    width: 181%;
+  }
+  .CourseContainer {
+    width: 181% !important;
+  }
+  .Hiring_container {
+    width: 154%;
+  }
+  .testimonialHeading {
+    width: 114%;
+  }
+  .contactComponent {
+    width: 128%;
+  }
+  .ComplaintImg {
+    width: 150%;
+    margin: 1rem 3.5rem;
+  }
+  .loginButton {
+    width: 20%;
+  }
+}
+@media (max-width: 360px) {
+  .comp2_container {
+    width: 220.1%;
+  }
+  .comp1_container {
+    width: 220%;
+  }
+  .navBar {
+    width: 220% !important;
+  }
+  .loginButton {
+    width: 23%;
+  }
+  .ribbon {
+    width: 224.1%;
+  }
+  .comp6_container {
+    width: 220.1%;
+  }
+  .testimonial {
+    width: 196%;
+  }
+  .exploreBtn {
+    font-size: small;
+    width: 38%;
+  }
+  .footerComponent {
+    width: 224% !important;
+  }
+  .footer {
+    width: 224%;
+  }
+  .nav-link {
+    font-size: 1rem;
+  }
+  .CourseContainer {
+    width: 224% !important;
+  }
+  .Hiring_container {
+    width: 190%;
+  }
+  .contactComponent {
+    width: 158%;
+  }
+  .ComplaintImg {
+    width: 195%;
+    margin: 1rem 2.5rem;
+  }
 }
