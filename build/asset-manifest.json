@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/TEN-frontend-clone-/static/css/main.ee157018.chunk.css",
-    "main.js": "/TEN-frontend-clone-/static/js/main.6f4aa76c.chunk.js",
-    "main.js.map": "/TEN-frontend-clone-/static/js/main.6f4aa76c.chunk.js.map",
+    "main.js": "/TEN-frontend-clone-/static/js/main.82b20a82.chunk.js",
+    "main.js.map": "/TEN-frontend-clone-/static/js/main.82b20a82.chunk.js.map",
     "runtime-main.js": "/TEN-frontend-clone-/static/js/runtime-main.5ebd6ec8.js",
     "runtime-main.js.map": "/TEN-frontend-clone-/static/js/runtime-main.5ebd6ec8.js.map",
     "static/css/2.818011ed.chunk.css": "/TEN-frontend-clone-/static/css/2.818011ed.chunk.css",
@@ -47,6 +47,6 @@
     "static/css/2.818011ed.chunk.css",
     "static/js/2.6d6afa1e.chunk.js",
     "static/css/main.ee157018.chunk.css",
-    "static/js/main.6f4aa76c.chunk.js"
+    "static/js/main.82b20a82.chunk.js"
   ]
 }
